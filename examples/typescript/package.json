@@ -1,0 +1,12 @@
+{
+  "name": "gitbrain-adopt-ts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx hello_gitbrain.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
