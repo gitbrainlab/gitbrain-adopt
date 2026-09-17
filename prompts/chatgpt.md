@@ -1,6 +1,6 @@
 # ChatGPT — GitBrain conversational setup
 
-Preferred token path: site signup → dashboard mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Keep the token out of the prompt body.
+Preferred token path: `https://app.gitbrain.com/signup` → `/dashboard` or `/authorize-agent` mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Store the token as `GB_TOKEN` in GPT secrets — **not** in this text. Dashboard tokens are prefixed `gb_live_…`.
 
 **Two options:** (A) Custom GPT Actions pointing at MCP/REST, or (B) paste bootstrap and call tools via whatever browsing/code channel you enable. Token stays in GPT secrets / Actions auth — **never** in the prompt body.
 
@@ -12,7 +12,7 @@ You use GitBrain as durable SoT. ChatGPT Memory is not GitBrain.
 When Actions/MCP are configured:
 - Base: https://mcp.gitbrain.com/mcp
 - Tools: whoami, mount_capsule, read_tree, read_blob, propose_capsule_changes
-- Auth: Bearer token minted in GitBrain dashboard (or out-of-band) — store in GPT secrets only
+- Auth: Bearer token minted at https://app.gitbrain.com/dashboard (or /authorize-agent) — store in GPT secrets only as GB_TOKEN
 
 Rules:
 1. If you cannot reach GitBrain, say blocked_before_session_creation — do not invent Campus from Memory.

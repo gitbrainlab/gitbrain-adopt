@@ -2,13 +2,13 @@
 
 **One topic:** give Claude, ChatGPT, or Grok a GitBrain session without writing an app.
 
-**Preferred token source:** sign up on the site and mint an agent token ([05-signup-e2e](05-signup-e2e.md)). Keep the token in the host secret store, not the prompt.
+**Preferred token source:** sign up at `https://app.gitbrain.com/signup`, then mint at `/dashboard` or `/authorize-agent` ([05-signup-e2e](05-signup-e2e.md)). Keep `GB_TOKEN` in the host secret store, not the prompt. Dashboard tokens are prefixed `gb_live_…`.
 
 ```mermaid
 flowchart LR
   subgraph Setup
-    T[Token from dashboard mint
-or out-of-band]
+    T[Token from /dashboard
+or /authorize-agent]
     P[Paste host prompt]
   end
   subgraph Session
@@ -32,7 +32,7 @@ Shared voice addendum: [prompts/voice.md](../prompts/voice.md).
 
 | Actor | Does |
 |-------|------|
-| You | Mint token in dashboard (or out-of-band); paste prompt; say the task |
+| You | Mint token at app.gitbrain.com/dashboard (or /authorize-agent); paste prompt; say the task |
 | Host model | whoami → mount → read → propose |
 | You (human) | Merge on Campus if the proposal should land |
 

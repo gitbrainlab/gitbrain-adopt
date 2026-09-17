@@ -38,7 +38,7 @@ sequenceDiagram
 
 ## Rules under the diagram
 
-1. Bearer host token out-of-band (`GB_TOKEN`). Never paste tokens into Campus docs or public prompts.
+1. Bearer token as `GB_TOKEN` (mint at `https://app.gitbrain.com/dashboard` or `/authorize-agent`; dashboard tokens are `gb_live_…`). Never paste tokens into Campus docs or public prompts.
 2. One session per task. Keep `session_id`.
 3. Writes = propose only. No agent commit.
 4. Graph is a **projection** of OKF/git objects — not a second database of truth.

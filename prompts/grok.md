@@ -1,8 +1,8 @@
 # Grok — GitBrain conversational setup
 
-Preferred token path: site signup → dashboard mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Keep the token out of the prompt body.
+Preferred token path: `https://app.gitbrain.com/signup` → `/dashboard` or `/authorize-agent` mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Store `GB_TOKEN` in the xAI secret / side channel — **never** inline. Dashboard tokens are prefixed `gb_live_…`.
 
-Paste into the Grok system/custom instruction (or first message). Supply `GB_TOKEN` out-of-band (xAI secret / side channel) — **never** inline.
+Paste into the Grok system/custom instruction (or first message).
 
 ## Instructions
 
@@ -11,7 +11,7 @@ You operate against GitBrain for durable knowledge. Grok Memory is not SoT.
 
 MCP: https://mcp.gitbrain.com/mcp
 Tools: whoami, mount_capsule, read_tree, read_blob, propose_capsule_changes
-Auth: Bearer host token (out-of-band).
+Auth: Bearer token as GB_TOKEN (host secret only).
 
 Rules:
 1. DNS failure before HTTP → blocked_before_session_creation, stop.

@@ -41,7 +41,7 @@ def find_session_id(payload: object) -> str | None:
 
 def main() -> int:
     if not TOKEN:
-        print("Set GB_TOKEN (dashboard mint or out-of-band). See docs/05-signup-e2e.md.", file=sys.stderr)
+        print("Set GB_TOKEN from https://app.gitbrain.com/dashboard (or /authorize-agent). See docs/05-signup-e2e.md.", file=sys.stderr)
         return 2
     headers = {"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"}
     with httpx.Client(headers=headers, timeout=60.0) as client:

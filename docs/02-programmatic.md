@@ -20,7 +20,9 @@ flowchart TD
 | TypeScript | [examples/typescript](../examples/typescript) | Node 20+, `fetch` |
 | Go | [examples/go](../examples/go) | Stdlib `net/http` |
 
-All four speak **MCP JSON-RPC** to `GB_MCP_URL` (default `https://mcp.gitbrain.com/mcp`).
+All four speak **MCP JSON-RPC** to `GB_MCP_URL` (default `https://mcp.gitbrain.com/mcp`) with `Authorization: Bearer $GB_TOKEN`.
+
+Mint `GB_TOKEN` at `https://app.gitbrain.com/dashboard` or `https://app.gitbrain.com/authorize-agent`. Dashboard tokens are prefixed `gb_live_…`. Never put the token in a prompt.
 
 ## Minimal contract
 
@@ -31,4 +33,4 @@ Content-Type: application/json
 POST { whoami | tools/call mount_capsule | read_tree | read_blob | propose_capsule_changes }
 ```
 
-REST twins exist on the same Worker (`/api/v1/me`, `/v1/sessions`, …) — see the session Worker repo if you prefer REST. This adopt kit standardizes on MCP so every host looks the same.
+This adopt kit standardizes on MCP (`https://mcp.gitbrain.com/mcp`) so every host looks the same.
