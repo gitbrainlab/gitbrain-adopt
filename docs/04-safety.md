@@ -11,6 +11,8 @@ Decision cells (yes/no), for busy implementers.
 | Open one session per task? | **Yes** |
 | Propose then human-merge? | **Yes** |
 | Prefer `mcp.gitbrain.com` over ad-hoc workers.dev hosts? | **Yes** |
+| Sign up on apex `gitbrain.com`? | **No** — use `app.gitbrain.com` |
+| Paste `GB_TOKEN` into a prompt? | **No** — host secret store only |
 
 ### Return shape when the agent is done
 

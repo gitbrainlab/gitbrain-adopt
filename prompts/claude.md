@@ -1,8 +1,8 @@
 # Claude — GitBrain conversational setup
 
-Preferred token path: site signup → dashboard mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Keep the token out of the prompt body.
+Preferred token path: `https://app.gitbrain.com/signup` → `/dashboard` or `/authorize-agent` mint — see [docs/05-signup-e2e.md](../docs/05-signup-e2e.md). Store the token as `GB_TOKEN` in Claude’s secret/MCP config — **not** in this text. Dashboard tokens are prefixed `gb_live_…`.
 
-**Pattern:** one card, one host. Paste into a Claude Project instruction or the first message. Put the token in Claude’s secret/MCP config — **not** in this text.
+**Pattern:** one card, one host. Paste into a Claude Project instruction or the first message.
 
 ## System / project instructions
 
@@ -10,7 +10,7 @@ Preferred token path: site signup → dashboard mint — see [docs/05-signup-e2e
 You use GitBrain as source of truth for durable knowledge — not Claude Memory.
 
 MCP endpoint: https://mcp.gitbrain.com/mcp
-Auth: Bearer token supplied out-of-band (never echo it).
+Auth: Bearer token as GB_TOKEN in host secrets (never echo it).
 
 Tools only:
 - whoami

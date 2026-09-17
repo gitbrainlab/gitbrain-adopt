@@ -1,4 +1,5 @@
-# Mint GB_TOKEN from https://app.gitbrain.com (Tokens) or out-of-band.
+# Mint GB_TOKEN from https://app.gitbrain.com/dashboard (or /authorize-agent).
+# Dashboard tokens are prefixed gb_live_… — never put the token in a prompt.
 #!/usr/bin/env bash
 set -euo pipefail
 : "${GB_TOKEN:?set GB_TOKEN}"
