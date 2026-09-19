@@ -64,6 +64,7 @@ Full swimlane: [docs/05-signup-e2e.md](docs/05-signup-e2e.md).
 | [03](docs/03-conversational.md) | Chat & voice hosts | Swimlane per host |
 | [04](docs/04-safety.md) | Safety & SoT rules | Yes/no decision cells |
 | [05](docs/05-signup-e2e.md) | Signup → MCP → site wiki | Swimlane + URL map |
+| [06](docs/06-panels-research.md) | Persistent panels (research only) | Registry + review-run planning; not product |
 
 ## Live endpoints (MVP)
 
